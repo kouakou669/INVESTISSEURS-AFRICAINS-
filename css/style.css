@@ -1,4 +1,3 @@
-
 /* Reset */
 * {
     box-sizing: border-box;
@@ -184,35 +183,54 @@ body {
     color: var(--link-hover-color);
 }
 
-/* Promo Banner Styles */
+
+
+
 .promo-banner {
     display: none; /* Caché par défaut */
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    padding: 15px;
-    text-align: left; /* Alignement à gauche */
-    position: fixed;
-    top: 50%; /* Centré verticalement */
-    right: -250px; /* Positionné en dehors de la vue à droite */
-    transform: translateY(-50%); /* Ajuster pour centrer verticalement */
-    z-index: 1000;
-    border-radius: 4px; /* Coins arrondis */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: right 0.3s ease; /* Animation lors de l'affichage */
+    background-color: #f8d7da; /* Couleur de fond */
+    color: #721c24; /* Couleur du texte */
+    padding: 10px; /* Espacement interne */
+    border: 1px solid #f5c6cb; /* Bordure */
+    border-radius: 5px; /* Coins arrondis */
+    position: fixed; /* Fixé à l'écran */
+    bottom: 20px; /* Position à 20px du bas */
+    left: 50%; /* Centré horizontalement */
+    transform: translateX(-50%); /* Centrer parfaitement */
+    z-index: 1000; /* Au-dessus des autres éléments */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour profondeur */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Animation */
 }
 
-/* Pour afficher la notification */
-.promo-banner.show {
-    right: 20px; /* Positionné à 20px du bord droit */
+.fade-in {
+    opacity: 1; /* Visible */
+    transform: translateY(0); /* Position d'origine */
+}
+
+.fade-out {
+    opacity: 0; /* Invisible */
+    transform: translateY(20px); /* Légèrement vers le bas lors de la fermeture */
+}
+
+.promo-content {
+    display: flex;
+    flex-direction: column; /* Alignement vertical */
+    align-items: flex-start; /* Alignement à gauche */
 }
 
 .close-btn {
-    float: right; /* Positionne la croix à droite */
+    margin-left: auto; /* Pousse le bouton à droite */
     cursor: pointer; /* Change le curseur au survol */
     font-size: 18px; /* Taille de la croix */
-    color: #fff; /* Couleur de la croix */
-    margin-left: 10px; /* Espacement à gauche de la croix */
+    color: red; /* Couleur de la croix */
+    background: none; /* Pas de fond */
+    border: none; /* Pas de bordure */
 }
+
+
+
+
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -255,24 +273,26 @@ body {
     }
 }
 
-
-.promo-banner {
-    display: none; /* Caché par défaut */
-    position: fixed;
-    bottom: 10px; /* Positionné à 20px du bas de la page */
-    right: -150px; /* Positionné en dehors de la vue à droite */
-    transform: translateY(0); /* Pas de transformation verticale */
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 10px;
-    border-radius: 2px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: right 0.3s ease;
-}
-
-.promo-banner.show {
-    display: block; /* Montre la notification quand elle a la classe 'show' */
-    right: 10px; /* Positionne la notification visible */
+/* Couleur des Titres H2 */
+h2 {
+    color: var(--secondary-color); /* Utilise la même couleur que celle des boutons */
 }
 
 
+/* Assurez-vous que toutes les images dans le conteneur s'ajustent correctement */
+.container img,
+.withdrawal-banner-image,
+.banner-image,
+.survey-image {
+    max-width: 100%; /* Limite la largeur à 100% de leur conteneur */
+    height: auto;    /* Maintient le ratio d'aspect original */
+    display: block;  /* Évite les espaces indésirables sous l'image */
+}
+
+/* Optionnel : Ajoutez un peu de marge pour un espacement */
+.withdrawal-banner-image,
+.banner-image,
+.survey-image {
+    margin: 0 auto;  /* Centre les images si leur conteneur a une largeur définie */
+    padding: 10px;   /* Ajoute un espacement autour des images */
+}
