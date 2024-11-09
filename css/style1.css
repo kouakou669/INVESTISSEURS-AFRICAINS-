@@ -1,1 +1,263 @@
 
+/* styles1.css */
+
+/* Réinitialisation de certains styles par défaut */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5; /* Couleur de fond douce */
+    color: #333; /* Couleur de texte */
+}
+
+/* Styles de la barre de navigation */
+.navbar {
+    background: #2e1a47; /* Couleur de fond de la barre de navigation */
+    padding: 15px 0;
+}
+
+.navbar .logo {
+    color: #fff; /* Couleur du texte du logo */
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center; /* Centrer les éléments de navigation */
+}
+
+.nav-item {
+    margin: 0 15px; /* Espacement entre les éléments */
+}
+
+.nav-link {
+    color: #fff; /* Couleur des liens */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    text-decoration: underline; /* Soulignement au survol */
+}
+
+/* Styles principaux */
+.container {
+    max-width: 1200px; /* Largeur maximale du contenu */
+    margin: 0 auto; /* Centrer le contenu */
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #2e1a47; /* Couleur des titres */
+}
+
+h1 {
+    margin-bottom: 20px; /* Espacement sous le titre principal */
+}
+
+h2 {
+    margin-top: 20px; /* Espacement au-dessus des sous-titres */
+    margin-bottom: 10px; /* Espacement en dessous des sous-titres */
+}
+
+/* Styles des paragraphes */
+p {
+    margin-bottom: 15px; /* Espacement sous les paragraphes */
+}
+
+/* Styles des listes */
+ul {
+    margin-left: 20px; /* Marge à gauche pour les listes */
+}
+
+/* Styles des boutons */
+.signup-btn {
+    background: #28a745; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    border: none;
+    padding: 10px 20px; /* Espacement à l'intérieur du bouton */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease; /* Effet de transition */
+}
+
+.signup-btn:hover {
+    background: #218838; /* Couleur de fond au survol */
+}
+
+/* Styles du pied de page */
+.footer {
+    background: #2e1a47; /* Couleur de fond du pied de page */
+    color: #fff; /* Couleur du texte du pied de page */
+    padding: 20px 0;
+    text-align: center; /* Centrer le texte du pied de page */
+}
+
+.footer-section {
+    margin-bottom: 20px; /* Espacement sous chaque section du pied de page */
+}
+
+.footer a {
+    color: #fff; /* Couleur des liens dans le pied de page */
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Soulignement au survol */
+}
+
+
+
+/* styles1.css */
+
+/* Styles globaux */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5; /* Couleur de fond douce */
+    color: #333; /* Couleur de texte */
+}
+
+/* Styles de la barre de navigation */
+.navbar {
+    background: #2e1a47; /* Couleur de fond de la barre de navigation */
+    padding: 15px 0;
+}
+
+.navbar .logo {
+    color: #fff; /* Couleur du texte du logo */
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center; /* Centrer les éléments de navigation */
+}
+
+.nav-item {
+    margin: 0 15px; /* Espacement entre les éléments */
+}
+
+.nav-link {
+    color: #fff; /* Couleur des liens */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    text-decoration: underline; /* Soulignement au survol */
+}
+
+/* Styles principaux */
+.container {
+    max-width: 1200px; /* Largeur maximale du contenu */
+    margin: 0 auto; /* Centrer le contenu */
+    padding: 20px;
+}
+
+.investment-overview {
+    text-align: center; /* Centrer le texte */
+    margin-bottom: 40px;
+}
+
+.banner-image {
+    width: 100%;
+    max-width: 800px; /* Largeur maximale de l'image */
+    border-radius: 10px; /* Coins arrondis */
+    margin: 20px 0; /* Espacement autour de l'image */
+}
+
+h1, h2, h3 {
+    color: #2e1a47; /* Couleur des titres */
+}
+
+h1 {
+    margin-bottom: 20px; /* Espacement sous le titre principal */
+}
+
+h2 {
+    margin-top: 20px; /* Espacement au-dessus des sous-titres */
+    margin-bottom: 10px; /* Espacement en dessous des sous-titres */
+}
+
+/* Styles des sondages */
+.available-surveys {
+    margin: 40px 0;
+}
+
+.survey {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s; /* Effet de transition */
+}
+
+.survey:hover {
+    transform: scale(1.02); /* Effet d'agrandissement au survol */
+}
+
+.survey-image {
+    width: 100%;
+    max-width: 300px; /* Largeur maximale de l'image du sondage */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+.signup-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* Styles des boutons */
+.signup-btn {
+    background: #28a745; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    border: none;
+    padding: 10px 20px; /* Espacement à l'intérieur du bouton */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease; /* Effet de transition */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+.signup-btn:hover {
+    background: #218838; /* Couleur de fond au survol */
+}
+
+/* Styles du pied de page */
+.footer {
+    background: #2e1a47; /* Couleur de fond du pied de page */
+    color: #fff; /* Couleur du texte du pied de page */
+    padding: 20px 0;
+    text-align: center; /* Centrer le texte du pied de page */
+}
+
+.footer-section {
+    margin-bottom: 20px; /* Espacement sous chaque section du pied de page */
+}
+
+.footer a {
+    color: #fff; /* Couleur des liens dans le pied de page */
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Soulignement au survol */
+}
+
+
