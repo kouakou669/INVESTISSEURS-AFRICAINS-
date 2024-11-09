@@ -425,7 +425,7 @@ header {
     text-decoration: none;
 }
 
-.signup-btn {
+  .signup-btn  , .login-btn{
     width: 100%;
     padding: 12px;
     background: var(--accent-color);
@@ -505,3 +505,7 @@ header {
         width: 100%; /* Une carte par ligne sur mobile */
     }
 }
+
+
+
+    
