@@ -1,24 +1,46 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    
+
+    
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Autres balises meta et liens existants -->
+    
+    <meta property="og:title" content="Sondage Invest">
+    <meta property="og:description" content="Participez à des sondages et gagnez de l'argent facilement !">
+    <meta property="og:image" content="https://iili.io/2Ir6AZv.jpg">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:type" content="website">
+    
     <title>Investissement</title>
+    <link rel="stylesheet" href="styles.css">
+
+    
+    
+    
+    
+    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    
+    
 
 
 
-
-<div id="promoNotification" class="promo-banner">
+<div id="promoNotification" class="promo-banner" style="display:none;">
     <div class="promo-content">
+        <span class="close-btn" aria-label="Fermer la notification" style="cursor:pointer; font-size:18px; color:red;">✖</span> <!-- Bouton de fermeture -->
         <video class="promo-video" controls>
             <source src="path/to/your/video.mp4" type="video/mp4">
             Votre navigateur ne prend pas en charge la vidéo.
         </video>
         <p>🎉 Bonus d'Investissement ! Recevez un bonus de 1000f pour chaque nouveau sondage complété ! 🎉</p>
-        <span class="close-btn" onclick="closePromoNotification()">✖</span>
     </div>
 </div>
 
@@ -30,7 +52,7 @@
 
 <header class="navbar">
     <div class="container">
-        <a href="#" class="logo">MonSite<span>Invest</span></a>
+        <a href="#" class="logo">Sondage<span>Invest</span></a>
         <nav class="navbar-nav">
             <ul>
                 <li class="nav-item"><a href="#" class="nav-link">Accueil</a></li>
@@ -42,11 +64,51 @@
     </div>
 </header>
 
+
 <main class="container">
+    
+    
+    
+    
+  <section class="withdrawal-info">
+    <h2><i class="fas fa-money-bill-wave"></i> Retraits de Gains</h2>
+    <img src="image/gains.jpg" alt="Retraits de Gains" class="withdrawal-banner-image">
+    <p>Une fois que vous avez atteint le seuil minimum de gains, vous pouvez demander un retrait facilement.</p>
+    
+    <div class="withdrawal-step">
+        <h3><i class="fas fa-check-circle"></i> Vérifiez Votre Solde</h3>
+        <p>Avant de demander un retrait, assurez-vous que vous avez atteint le montant minimum requis pour le retrait.</p>
+    </div>
+    
+    <div class="withdrawal-step">
+        <h3><i class="fas fa-paper-plane"></i> Soumettez Votre Demande de Retrait</h3>
+        <p>Accédez à votre compte et remplissez le formulaire de demande de retrait. Choisissez votre mode de paiement préféré.</p>
+    </div>
+    
+    <div class="withdrawal-step">
+        <h3><i class="fas fa-clock"></i> Traitement de Votre Demande</h3>
+        <p>Votre demande sera traitée dans un délai de 2 à 5 jours ouvrables. Vous recevrez une notification par e-mail une fois que votre retrait est approuvé.</p>
+    </div>
+    
+    <div class="withdrawal-step">
+        <h3><i class="fas fa-money-check-alt"></i> Recevez Vos Gains</h3>
+        <p>Une fois votre demande approuvée, vos gains seront transférés selon le mode de paiement que vous avez sélectionné.</p>
+    </div>
+    
+    <p>Pour toute question concernant les retraits, veuillez consulter notre section d'aide ou nous contacter directement.</p>
+</section>
+
+    
+    
+    
+    
+    
+    
+    
     <section class="investment-overview">
         <h1>Investissez dans des Sondages</h1>
-        <img src="images/investment-banner.jpg" alt="Investissement" class="banner-image">
-        <p>Pour chaque sondage complété, vous recevrez <strong>600f</strong> sur votre compte. Participez à nos sondages et augmentez vos gains tout en partageant votre opinion !</p>
+        <img src="image/invest.jpg" alt="Investissement" class="banner-image">
+        <p>Pour chaque sondage complété, vous recevrez <strong>600 fcfa</strong> sur votre compte. Participez à nos sondages et augmentez vos gains tout en partageant votre opinion !</p>
         <p>Notre plateforme vous permet de gagner de l'argent facilement et rapidement. Inscrivez-vous dès maintenant pour commencer.</p>
     </section>
 
@@ -56,28 +118,59 @@
             <img src="https://iili.io/2dZyTwN.jpg" alt="Sondage 1" class="survey-image">
             <h3>Sondage sur les Produits de Consommation</h3>
             <p>Participez à notre enquête sur les produits de consommation et partagez vos préférences pour gagner 600f.</p>
-            <button class="signup-btn" onclick="openModal('signup')">Participer</button>
+            <button class="signup-btn" onclick="redirectToSurvey('survey1.html')">Participer</button>
         </div>
         <div class="survey">
             <img src="https://iili.io/2dZyTwN.jpg" alt="Sondage 2" class="survey-image">
             <h3>Sondage sur les Services en Ligne</h3>
             <p>Aidez-nous à comprendre vos expériences avec les services en ligne et recevez 600f en retour.</p>
-            <button class="signup-btn" onclick="openModal('signup')">Participer</button>
+            <button class="signup-btn" onclick="redirectToSurvey('survey2.html')">Participer</button>
         </div>
         <div class="survey">
             <img src="https://iili.io/2dZyTwN.jpg" alt="Sondage 3" class="survey-image">
             <h3>Sondage sur la Santé et le Bien-être</h3>
             <p>Participez à notre sondage sur la santé et le bien-être pour contribuer à des recherches importantes et gagnez 600f.</p>
-            <button class="signup-btn" onclick="openModal('signup')">Participer</button>
+            <button class="signup-btn" onclick="redirectToSurvey('survey3.html')">Participer</button>
         </div>
     </section>
 
     <section class="signup-section">
         <h2>Inscription / Connexion</h2>
         <p>Rejoignez notre communauté pour commencer à gagner de l'argent avec les sondages !</p>
-        <button class="signup-btn" onclick="openModal('signup')">S'inscrire</button>
+        <button class="signup-btn" onclick="redirectToSignup()">S'inscrire</button>
         <button class="signup-btn" onclick="openModal('login')">Se connecter</button>
     </section>
+    
+    
+    
+    
+    <section class="payment-methods">
+    <h2><i class="fas fa-credit-card"></i> Modes de Paiement</h2>
+    <p>Nous offrons plusieurs options de paiement pour vous permettre de recevoir vos gains facilement et en toute sécurité.</p>
+    <div class="payment-method">
+        <h3><i class="fas fa-university"></i> Virement Bancaire</h3>
+        <p>Recevez vos paiements directement sur votre compte bancaire. Veuillez fournir vos coordonnées bancaires lors de l'inscription.</p>
+    </div>
+    <div class="payment-method">
+        <h3><i class="fab fa-paypal"></i> PayPal</h3>
+        <p>Utilisez votre compte PayPal pour recevoir vos paiements rapidement et en toute sécurité.</p>
+    </div>
+    <div class="payment-method">
+        <h3><i class="fas fa-mobile-alt"></i> Mobile Money</h3>
+        <p>Nous acceptons les paiements via Mobile Money. Veuillez indiquer votre numéro de téléphone lors de la demande de paiement.</p>
+    </div>
+    <div class="payment-method">
+        <h3><i class="fas fa-credit-card"></i> Cartes de Crédit/Débit</h3>
+        <p>Vous pouvez également choisir de recevoir vos paiements sur votre carte de crédit ou de débit.</p>
+    </div>
+    <p>Pour toute question concernant les modes de paiement, n'hésitez pas à nous contacter.</p>
+</section>
+
+    
+    
+    
+    
+    
 </main>
 
 <footer class="footer">
@@ -90,7 +183,6 @@
             <li><a href="#">Carrières</a></li>
         </ul>
     </div>
-
     <div class="footer-section">
         <h3>Services</h3>
         <ul>
@@ -100,7 +192,6 @@
             <li><a href="#">Consultation IT</a></li>
         </ul>
     </div>
-
     <div class="footer-section">
         <h3>Resources</h3>
         <ul>
@@ -110,7 +201,6 @@
             <li><a href="#">Support</a></li>
         </ul>
     </div>
-
     <div class="footer-section">
         <h3>Contact</h3>
         <ul>
@@ -119,7 +209,6 @@
             <li><a href="#">ABIDJAN AFRICA</a></li>
         </ul>
     </div>
-
     <div class="footer-bottom">
         <div class="social-links">
             <a href="#"><i class="fab fa-github"></i></a>
@@ -131,7 +220,8 @@
     </div>
 </footer>
 
-<!-- Modals -->
+<script src="script1.js"></script>
+
 <script src="script.js"></script>
 
 </body>
