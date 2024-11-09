@@ -1,0 +1,278 @@
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Color Variables */
+:root {
+    --primary-color: #2e1a47; /* Couleur principale (violet) */
+    --secondary-color: #e74c3c; /* Couleur secondaire (rouge) */
+    --text-color: #fff; /* Couleur du texte blanc */
+    --link-color: orange; /* Couleur des liens */
+    --link-hover-color: #ffcc00; /* Couleur des liens au survol */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: var(--primary-color);
+    padding: 15px 0;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.navbar .logo span {
+    color: var(--secondary-color);
+}
+
+.navbar-nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar-nav li {
+    margin-left: 20px;
+}
+
+.navbar-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar-nav a.active,
+.navbar-nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* Main Content Styles */
+.investment-overview {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.investment-overview .banner-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.available-surveys {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.survey {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.survey-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.signup-section {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.signup-btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.signup-btn:hover {
+    background-color: #c0392b; /* Couleur au survol */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    color: var(--text-color);
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.footer-section a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+    color: var(--link-hover-color);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: var(--link-color);
+}
+
+.social-links a:hover {
+    color: var(--link-hover-color);
+}
+
+/* Promo Banner Styles */
+.promo-banner {
+    display: none; /* Caché par défaut */
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 15px;
+    text-align: left; /* Alignement à gauche */
+    position: fixed;
+    top: 50%; /* Centré verticalement */
+    right: -250px; /* Positionné en dehors de la vue à droite */
+    transform: translateY(-50%); /* Ajuster pour centrer verticalement */
+    z-index: 1000;
+    border-radius: 4px; /* Coins arrondis */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease; /* Animation lors de l'affichage */
+}
+
+/* Pour afficher la notification */
+.promo-banner.show {
+    right: 20px; /* Positionné à 20px du bord droit */
+}
+
+.close-btn {
+    float: right; /* Positionne la croix à droite */
+    cursor: pointer; /* Change le curseur au survol */
+    font-size: 18px; /* Taille de la croix */
+    color: #fff; /* Couleur de la croix */
+    margin-left: 10px; /* Espacement à gauche de la croix */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar .container {
+        padding: 0 15px;
+    }
+
+    .navbar-nav li {
+        margin-left: 15px;
+    }
+
+    .investment-overview {
+        padding: 30px;
+    }
+
+    .available-surveys {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .survey {
+        padding: 20px;
+    }
+
+    .signup-section {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .logo {
+        font-size: 20px;
+    }
+
+    .navbar-nav li {
+        margin-left: 10px;
+    }
+
+    .available-surveys {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.promo-banner {
+    display: none; /* Caché par défaut */
+    position: fixed;
+    bottom: 10px; /* Positionné à 20px du bas de la page */
+    right: -150px; /* Positionné en dehors de la vue à droite */
+    transform: translateY(0); /* Pas de transformation verticale */
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+}
+
+.promo-banner.show {
+    display: block; /* Montre la notification quand elle a la classe 'show' */
+    right: 10px; /* Positionne la notification visible */
+}
+
+
