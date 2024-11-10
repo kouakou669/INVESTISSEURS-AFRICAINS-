@@ -18,14 +18,14 @@
     <meta property="og:type" content="website">
     
     <title>Investissement</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles.css">
 
     
     
     
     
     
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
@@ -33,16 +33,18 @@
 
 
 
+
 <div id="promoNotification" class="promo-banner" style="display:none;">
     <div class="promo-content">
         <span class="close-btn" aria-label="Fermer la notification" style="cursor:pointer; font-size:18px; color:red;">✖</span> <!-- Bouton de fermeture -->
-        <video class="promo-video" controls>
-            <source src="path/to/your/video.mp4" type="video/mp4">
+        <video class="promo-video" controls autoplay>
+            <source src="image/video.mp4" type="video/mp4">
             Votre navigateur ne prend pas en charge la vidéo.
         </video>
         <p>🎉 Bonus d'Investissement ! Recevez un bonus de 1000f pour chaque nouveau sondage complété ! 🎉</p>
     </div>
 </div>
+
 
 
 
@@ -72,7 +74,7 @@
     
   <section class="withdrawal-info">
     <h2><i class="fas fa-money-bill-wave"></i> Retraits de Gains</h2>
-    <img src="image/gains.jpg" alt="Retraits de Gains" class="withdrawal-banner-image">
+    <img src="https://iili.io/2TJOT0X.jpg" alt="Retraits de Gains" class="withdrawal-banner-image">
     <p>Une fois que vous avez atteint le seuil minimum de gains, vous pouvez demander un retrait facilement.</p>
     
     <div class="withdrawal-step">
@@ -112,14 +114,31 @@
         <p>Notre plateforme vous permet de gagner de l'argent facilement et rapidement. Inscrivez-vous dès maintenant pour commencer.</p>
     </section>
 
-    <section class="available-surveys">
-        <h2>Sondages Disponibles</h2>
-        <div class="survey">
-            <img src="https://iili.io/2dZyTwN.jpg" alt="Sondage 1" class="survey-image">
-            <h3>Sondage sur les Produits de Consommation</h3>
-            <p>Participez à notre enquête sur les produits de consommation et partagez vos préférences pour gagner 600f.</p>
-            <button class="signup-btn" onclick="redirectToSurvey('survey1.html')">Participer</button>
+
+
+
+<section class="available-surveys">
+    <h2>Sondages Disponibles</h2>
+    <div class="survey">
+        <div class="video-container">
+            <video class="survey-video" controls>
+                <source src="image/video.mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge la vidéo.
+            </video>
         </div>
+        <h3>Sondage sur les Produits de Consommation</h3>
+        <p id="dynamic-text"></p> <!-- Texte dynamique -->
+        <button class="signup-btn" onclick="redirectToSurvey('survey1.html')">Participer</button>
+    </div>
+</section>
+
+
+
+
+    
+        
+        
+        
         <div class="survey">
             <img src="https://iili.io/2dZyTwN.jpg" alt="Sondage 2" class="survey-image">
             <h3>Sondage sur les Services en Ligne</h3>
@@ -220,9 +239,9 @@
     </div>
 </footer>
 
-<script src="./js/script1.js"></script>
+<script src="js/script1.js"></script>
 
-<script src="./js/script.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
